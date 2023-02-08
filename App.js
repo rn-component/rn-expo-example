@@ -1,15 +1,43 @@
 import { StatusBar } from 'expo-status-bar'
 import { StyleSheet, Text, View } from 'react-native'
+import * as Haptics from 'expo-haptics'
 
 import Button from './src/components/Button'
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>Open up App.js to start working on your app!</Text>
+      <Text style={styles.text}>Hello Expo!</Text>
       <Button
         title="Test"
+        style={{
+          marginBottom: 12
+        }}
         onPress={() => { console.log('111') }}
+      />
+      <Button
+        title="震动反馈 - 成功"
+        style={{
+          marginBottom: 12
+        }}
+        onPress={() => {
+          Haptics.notificationAsync(Haptics.NotificationFeedbackType.Success)
+        }}
+      />
+      <Button
+        title="震动反馈 - 失败"
+        style={{
+          marginBottom: 12
+        }}
+        onPress={() => {
+          Haptics.notificationAsync(Haptics.NotificationFeedbackType.Error)
+        }}
+      />
+      <Button
+        title="震动反馈 - 警告"
+        onPress={() => {
+          Haptics.notificationAsync(Haptics.NotificationFeedbackType.Warning)
+        }}
       />
       <StatusBar style="auto" />
     </View>

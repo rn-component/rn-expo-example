@@ -38,3 +38,32 @@ yarn start
 ```
 
 使用：见 `src/components/Button`
+
+## 3. 震动反馈
+
+### 依赖安装
+
+```shell
+expo install expo-haptics
+```
+
+### 简单使用
+
+见 App.js，文档：[https://docs.expo.dev/versions/v47.0.0/sdk/haptics/](https://docs.expo.dev/versions/v47.0.0/sdk/haptics/)
+
+```jsx
+import * as Haptics from 'expo-haptics'
+
+export default () => {
+  // ...
+  
+  return (
+    <Button
+      title="震动反馈 - 成功"
+      onPress={() => {
+        Haptics.notificationAsync(Haptics.NotificationFeedbackType.Success)
+      }}
+    />
+  )
+}
+```
