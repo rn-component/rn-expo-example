@@ -37,34 +37,4 @@ yarn start
 }
 ```
 
-使用
-
-```jsx
-import { StatusBar } from 'expo-status-bar'
-import { StyleSheet, Text, View, useColorScheme } from 'react-native'
-
-export default function App() {
-  const colorSchema = useColorScheme() // dark/light 变化会触发重新渲染
-
-  console.log('====colorSchema====')
-  console.log(colorSchema)
-
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
-}
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
-```
-
-
+使用：见 `src/components/Button`
