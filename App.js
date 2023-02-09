@@ -3,6 +3,7 @@ import { StyleSheet, Text, View } from 'react-native'
 import * as Haptics from 'expo-haptics'
 
 import Button from './src/components/Button'
+import { i18n } from './src/libs/Localization'
 
 export default function App() {
   return (
@@ -16,7 +17,7 @@ export default function App() {
         onPress={() => { console.log('111') }}
       />
       <Button
-        title="震动反馈 - 成功"
+        title={i18n.t('haptics_success')}
         style={{
           marginBottom: 12
         }}

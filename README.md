@@ -67,3 +67,20 @@ export default () => {
   )
 }
 ```
+
+## 4. 多语言支持
+
+### 依赖安装
+
+```shell
+expo install expo-haptics i18n-js
+```
+
+### 简单使用
+
+见 App.js src/utils/translations.js src/libs/Localization.js
+
+```jsx
+// 切换系统语言试试？
+i18n.t('haptics_success')
+```
